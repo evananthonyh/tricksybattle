@@ -17,3 +17,17 @@ deck = deck[16:]
 # Start scores at 0
 player1_score = 0
 player2_score = 0
+
+# Play 8 rounds
+for round_num in range(1, 9):
+    print(f"\nRound {round_num}")
+
+    # Player 1 starts
+    card_a = player1.pop()
+    card_b = player2.pop()
+
+    # Card descriptions
+    card_a_str = f"{card_a[0][1]} of {card_a[0][0]}"
+    card_b_str = f"{card_b[0][1]} of {card_b[0][0]}"
+    print(f"Card A is a {card_a_str}")
+    print(f"Card B is a {card_b_str}")
