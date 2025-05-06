@@ -45,3 +45,15 @@ for round_num in range(1, 9):
     else:
         print(f"Different suits, Player 1 wins the round!")
         player1_score += 1
+
+# Final score
+print("\nFinal Scores")
+print(f"Player 1: {player1_score}")
+print(f"Player 2: {player2_score}")
+
+if player1_score > player2_score:
+    print("Player 1 wins the game!")
+elif player2_score > player1_score:
+    print("Player 2 wins the game!")
+else:
+    print("It's a tie!")
