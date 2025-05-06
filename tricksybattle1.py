@@ -31,3 +31,17 @@ for round_num in range(1, 9):
     card_b_str = f"{card_b[0][1]} of {card_b[0][0]}"
     print(f"Card A is a {card_a_str}")
     print(f"Card B is a {card_b_str}")
+
+# Determine winner
+    if card_a[0][0] == card_b[0][0]:  # Same suit
+        if card_a[1] > card_b[1]:
+            print(f"{card_a_str} beats {card_b_str}, Player 1 wins the round!")
+            player1_score += 1
+        elif card_b[1] > card_a[1]:
+            print(f"{card_b_str} beats {card_a_str}, Player 2 wins the round!")
+            player2_score += 1
+        else:
+            print("It's a tie!")
+    else:
+        print(f"Different suits, Player 1 wins the round!")
+        player1_score += 1
