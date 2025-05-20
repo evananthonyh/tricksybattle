@@ -23,3 +23,4 @@ This is a two-player card game implemented in Python.
 
 - `tricksybattle1.py`: Main script that runs the game.
 - `README.md`: This file.
+- `LICENSE.txt`: contains the MIT license with my name and year
