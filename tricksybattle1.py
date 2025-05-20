@@ -1,4 +1,5 @@
 import random
+import time
 
 # Deck set up
 suits = ["Hearts", "Diamonds", "Spades", "Clubs"]
@@ -18,19 +19,25 @@ deck = deck[16:]
 player1_score = 0
 player2_score = 0
 
+# Record start time of game
+start_time = time.process_time()
+
 # Play 8 rounds
 for round_num in range(1, 9):
     print(f"\nRound {round_num}")
 
     # Player 1 starts
     card_a = player1.pop()
+    time.sleep(0.5) 
     card_b = player2.pop()
 
     # Card descriptions
     card_a_str = f"{card_a[0][1]} of {card_a[0][0]}"
     card_b_str = f"{card_b[0][1]} of {card_b[0][0]}"
     print(f"Card A is a {card_a_str}")
+    time.sleep(0.5) 
     print(f"Card B is a {card_b_str}")
+    time.sleep(0.5) 
 
 # Determine winner
     if card_a[0][0] == card_b[0][0]:  # Same suit
@@ -45,6 +52,7 @@ for round_num in range(1, 9):
     else:
         print(f"Different suits, Player 1 wins the round!")
         player1_score += 1
+        time.sleep(1) 
 
 # Final score
 print("\nFinal Scores")
@@ -57,3 +65,7 @@ elif player2_score > player1_score:
     print("Player 2 wins the game!")
 else:
     print("It's a tie!")
+
+# Record end time and calculate game runtime
+end_time = time.process_time()
+print(f"\nGame completed in {end_time - start_time:.2f} seconds")
